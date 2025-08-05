@@ -29,3 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('copyright').innerText = `© Jacobo Garcés. ${new Date().getFullYear().toString()}`
 })
+// ... existing code ...
+
+// Reveal animations
+const revealElements = document.querySelectorAll('.reveal')
+
+function checkReveal() {
+  const windowHeight = window.innerHeight
+  const revealPoint = 150
+
+  revealElements.forEach(element => {
+    const elementTop = element.getBoundingClientRect().top
+    
+    if (elementTop < windowHeight - revealPoint) {
+      element.classList.add('active')
+    }
+  })
+}
+
+window.addEventListener('scroll', checkReveal)
+window.addEventListener('load', checkReveal)

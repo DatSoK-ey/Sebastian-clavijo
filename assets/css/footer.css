@@ -1,0 +1,43 @@
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+}
+
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer__icon {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.footer__link {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.footer__link:hover {
+  color: #4CAF50;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+#copyright {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+@media screen and (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+}
